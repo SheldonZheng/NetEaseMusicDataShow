@@ -25,7 +25,6 @@ public class DataController {
     public List<Music> data(@RequestParam(name = "count") Integer count, @RequestParam(name = "start") Integer start, HttpServletRequest req, HttpServletResponse res)
     {
         List<Music> musicList = musicDAO.getDataByCountAndStart(start,count);
-        res.setHeader("Access-Control-Allow-Origin","*");
         return musicList;
     }
 
