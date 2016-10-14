@@ -57,8 +57,10 @@ public class MusicDAO {
         if(conn != null)
             return conn;
         try {
-            Class.forName(DBConf.JDBC_DRIVER);
-            conn = DriverManager.getConnection(DBConf.DB_URL,DBConf.USER,DBConf.PASS);
+            Class.forName(DBConf.readValue(DBConf.DATABASE_DRIVERNAME));
+            conn = DriverManager.getConnection(DBConf.readValue(DBConf.DATABASE_URL),
+                    DBConf.readValue(DBConf.DATABASE_USERNAME),
+                    DBConf.readValue(DBConf.DATABASE_PASSWORD));
 
             return conn;
         } catch (ClassNotFoundException e) {
