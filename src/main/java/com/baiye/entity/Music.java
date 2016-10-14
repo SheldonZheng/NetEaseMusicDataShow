@@ -5,54 +5,64 @@ package com.baiye.entity;
  */
 public class Music {
 
-    private String name;
+    private String ID;
 
-    private String artistName;
+    private String Name;
 
-    private String albumName;
+    private String Artist;
 
-    private Long commentCount;
+    private String Album;
 
-    private String songURL;
+    private Long CommentCount;
+
+    private String URL;
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 
-    public String getArtistName() {
-        return artistName;
+    public String getArtist() {
+        return Artist;
     }
 
-    public void setArtistName(String artistName) {
-        this.artistName = artistName;
+    public void setArtist(String artist) {
+        this.Artist = artist;
     }
 
-    public String getAlbumName() {
-        return albumName;
+    public String getAlbum() {
+        return Album;
     }
 
-    public void setAlbumName(String albumName) {
-        this.albumName = albumName;
+    public void setAlbum(String album) {
+        this.Album = album;
     }
 
     public Long getCommentCount() {
-        return commentCount;
+        return CommentCount;
     }
 
     public void setCommentCount(Long commentCount) {
-        this.commentCount = commentCount;
+        this.CommentCount = commentCount;
     }
 
-    public String getSongURL() {
-        return songURL;
+    public String getURL() {
+        return URL;
     }
 
-    public void setSongURL(String songURL) {
-        this.songURL = songURL;
+    public void setURL(String URL) {
+        this.URL = URL;
     }
 
 
@@ -61,10 +71,10 @@ public class Music {
     public String toString() {
         StringBuffer sb = new StringBuffer();
         sb.append("Name : " + this.getName() + "\t");
-        sb.append("Artist : "+ this.getArtistName() + "\t");
-        sb.append("Album : " + this.getAlbumName() + "\t");
+        sb.append("Artist : "+ this.getArtist() + "\t");
+        sb.append("Album : " + this.getAlbum() + "\t");
         sb.append("CommentCount : " + this.getCommentCount() + "\t");
-        sb.append("URL : " + this.getSongURL() + "\t");
+        sb.append("URL : " + this.getURL() + "\t");
         return sb.toString();
     }
 }
